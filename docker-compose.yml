@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  payroll-app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./static:/app/static
+    environment:
+      - API_USER=${API_USER:-default_user}
+      - API_PASSWORD=${API_PASSWORD:-default_pass}
+      - SMTP_SERVER=${SMTP_SERVER:-smtp.gmail.com}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER:-default@gmail.com}
+      - SMTP_PASSWORD=${SMTP_PASSWORD:-default_password}

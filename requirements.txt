@@ -1,0 +1,7 @@
+flask
+python-dotenv
+reportlab
+pandas
+pytest
+pypdf
+pytest-mock
